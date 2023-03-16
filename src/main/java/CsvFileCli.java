@@ -48,7 +48,7 @@ public class CsvFileCli {
             if(searchByColumnResult.size() == 0) {
                 long endTime = System.currentTimeMillis();
                 System.out.println("Количество найденных строк: "+0 +"  затраченное на поиск время: "+(endTime - startTime) + " мc");
-                return;
+                continue;
             }
 
             StringFormatChecker isNumericString = new InNumericString();

@@ -114,11 +114,15 @@ public class SimpleTernarySearchTree implements TernarySearchTree {
 
         traverseRecursive(currentNode, result, stringBuffer, query.length());
 
-        if(currentNode==null) {
-            if(previousNode.isCompleteString()) {
-                result.add(new SimplePair<>(previousNode.getRowNumbers(), stringBuffer.toString()));
-            }
-        } else if(currentNode.isCompleteString()) {
+//        if(currentNode==null) {
+//            if(previousNode.isCompleteString()) {
+//                result.add(new SimplePair<>(previousNode.getRowNumbers(), stringBuffer.toString()));
+//            }
+//        } else
+        if(currentNode == null) {
+            return result;
+        }
+        if(currentNode.isCompleteString()) {
             result.add(new SimplePair<>(currentNode.getRowNumbers(), stringBuffer.toString()));
         }
 
