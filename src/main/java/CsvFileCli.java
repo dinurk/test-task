@@ -5,7 +5,6 @@ import parser.CsvFileParser;
 import reader.CsvFileReader;
 import formatchecker.InNumericString;
 
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
