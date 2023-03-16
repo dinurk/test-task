@@ -108,6 +108,11 @@ public class SimpleTernarySearchTree implements TernarySearchTree {
             }
         }
 
+        if(currentNode == null && characterIndex == query.length()) {
+            result.add(new SimplePair<>(previousNode.getRowNumbers(), query));
+            return result;
+        }
+
         StringBuffer stringBuffer = new StringBuffer(1000);
 
         stringBuffer.append(query);
@@ -119,12 +124,12 @@ public class SimpleTernarySearchTree implements TernarySearchTree {
 //                result.add(new SimplePair<>(previousNode.getRowNumbers(), stringBuffer.toString()));
 //            }
 //        } else
-        if(currentNode == null) {
-            return result;
-        }
-        if(currentNode.isCompleteString()) {
-            result.add(new SimplePair<>(currentNode.getRowNumbers(), stringBuffer.toString()));
-        }
+//        if(currentNode == null) {
+//            return result;
+//        }
+//        if(currentNode.isCompleteString()) {
+//            result.add(new SimplePair<>(currentNode.getRowNumbers(), stringBuffer.toString()));
+//        }
 
         return result;
     }
